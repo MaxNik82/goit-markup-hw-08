@@ -1,0 +1,33 @@
+.work-list {
+    display: flex;   
+
+    & > li:not(:nth-child(3)) {
+        margin-right: 30px;
+    }
+}
+.work.item {
+    width: 370px;
+    position: relative;
+}
+
+.work-text {
+    position: absolute;
+    margin: 0;
+    padding-top: 27px;
+    bottom: 0;
+    width: 370px;
+    height: 70px;
+
+    color: $primary-white-color;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+   
+    background-image: linear-gradient(
+    to right,
+    rgba(47, 48, 58, 0.8),
+    rgba(47, 48, 58, 0.8)
+    );
+}

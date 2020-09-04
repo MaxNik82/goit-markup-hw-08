@@ -1,0 +1,15 @@
+.footer {
+    padding: 60px 0;
+    background-color: #2F303A;
+    color: $white-color;
+    justify-content: space-between;
+    
+    & .container {
+        align-items: baseline;
+
+        &.flexbox > div:not(:nth-child(3)) {
+            margin-right: 30px;
+        }
+    }
+}
+
