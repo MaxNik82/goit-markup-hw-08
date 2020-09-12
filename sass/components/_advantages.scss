@@ -1,57 +1,87 @@
-.advantages-list {
-    display: flex;
 
-    & > li:not(:nth-child(4n)) {
-        margin-right: 30px;
+.advantages-list {
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
     }
+
 }
 
 .advantages.item {
     display: flex;
     flex-direction: column;
-    width: calc((100% - 90px) / 4);
+    width: 100%;
 
-    &::before {
-    
-        content: "";
-        
-        height: 120px;
-        
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: $secondary-bg-color;
+    @media screen and (max-width: 767px) {
+        max-width: 450px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
     }
-    
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        width: calc((100% - 30px) / 2);
+
+        &:not(:nth-child(2n)) {
+            margin-right: 30px;
+            margin-left: 0;
+        }
+
+        &:not(:nth-last-child(-n+2)) {
+            margin-bottom: 30px;
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: calc((100% - 90px) / 4);
+
+        &:not(:nth-child(4n)) {
+            margin-right: 30px;
+        }
+    }  
 }
 
-.item-antenna::before {
-    background-image: url(../images/antenna.svg);
-}
-
-.item-clock::before {
-    background-image: url(../images/clock.svg);
-}
-
-.item-diagram::before {
-    background-image: url(../images/diagram.svg);
-}
-
-.item-astronaut::before {
-    background-image: url(../images/astronaut.svg);
-}
 
 .advantages-title {
+    margin-top: 30px;
+    margin-bottom: 10px;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
-    margin: 30px 0 0;
+    letter-spacing: 0.03em;
+    
+    @media screen and (max-width: 767px) {
+        text-align: center;
+    }
 }
 
 .advantages-description {
-    margin: 10px 0 0;
-    font-size: 14px;
-    line-height: 1.7;
-
+    margin: 0;
+    padding: 0;
+    
     color: $list-text-color;
+    
+}
+
+.icon {
+    display: inline-flex;
+    padding: 25px 0;
+    background-color: $secondary-bg-color;
+   
+    justify-content: center;
+    width: 100%;
+
+    @media screen and (min-width: 480px) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 450px;
+      
+    }
+    
 }

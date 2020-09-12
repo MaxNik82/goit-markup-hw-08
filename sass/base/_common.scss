@@ -8,6 +8,17 @@ html {
     box-sizing: inherit;
 }
 
+body {
+    color: $primary-text-color;
+    background-color: $primary-white-color;  
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;  
+}
+
 .visually-hidden {
     position: absolute !important;
     clip: rect(1px 1px 1px 1px);
@@ -19,38 +30,57 @@ html {
     overflow: hidden;
 }
 
-// .flexbox {
-//     display: flex;
-// }
-
-body {
-    color: $primary-text-color;
-    background-color: $primary-white-color;  
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.03em;  
+.flexbox {
+    display: flex;
+    justify-content: center;
 }
 
-// .container {
-//     margin-left: auto;
-//     margin-right: auto;
-//     width: 1200px;
-//     padding-left: 15px;
-//     padding-right: 15px;
-//     align-items: center;
-// }
 
-section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    // width: 100%;
+    // max-width: 1200px;;
+    padding-left: 15px;
+    padding-right: 15px;
+    // align-items: center;
+    
+    @media screen and (min-width: $mobile) {
+        width: $mobile;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: $tablet;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: $desktop;
+    }
 }
 
-.section-title {
-    text-align: center;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;   
-    color: $primary-text-color;
-    margin: 0 0 50px;
+.section {
+    margin-top: $margin-mobile;
+
+    @media screen and (min-width: $desktop) {
+        margin-top: $margin-desktop;
+    }
+
+    &-title {
+        margin-top: 0;
+        margin-bottom: 30px;
+
+        color: $primary-text-color;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 1.18;
+        text-align: center;
+
+        @media screen and (min-width: $desktop) {
+            font-size: 36px;
+            margin-bottom: 50px;
+        }
+    }
 }
     
 .list-title,
@@ -73,4 +103,3 @@ img {
     max-width: 100%;
     height: auto;
 }
-

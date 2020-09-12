@@ -1,6 +1,6 @@
-.footer {
-    padding: 60px 0;
-    background-color: #2F303A;
+footer {
+    // padding: 60px 0;
+    background-color: $footer-bg-color;
     color: $white-color;
     justify-content: space-between;
     
@@ -11,5 +11,31 @@
             margin-right: 30px;
         }
     }
+    margin-top: $margin-mobile;
+    
+
+    @media screen and (min-width: $desktop) {
+        margin-top: $margin-desktop;
+    }
 }
 
+.footer-flexbox {
+    align-items: baseline;
+    padding-bottom: 60px;
+    padding-top: 60px;
+
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: baseline;
+    }
+
+    @media screen and (min-width: $desktop) {
+
+        flex-wrap: nowrap;
+        text-align: left;
+    }
+}

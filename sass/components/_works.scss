@@ -1,3 +1,9 @@
+.mobile-hidden {
+    @media screen and (max-width: 1199px) {
+        display: none;
+    }
+}
+
 .work-list {
     display: flex;   
 
@@ -5,6 +11,7 @@
         margin-right: 30px;
     }
 }
+
 .work.item {
     width: 370px;
     position: relative;

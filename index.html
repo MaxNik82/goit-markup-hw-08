@@ -11,8 +11,8 @@
   </head>
   <body>
       <!-- Шапка сайта -->
-        <header class="page-header">
-            <!-- <div class="container flexbox">
+        <!-- <header class="page-header">
+            <div class="container flexbox">
                 <nav class="main-nav">       
                     <a href="./index.html" class="logo"> <span class="logo-word">Web</span> Studio
                     </a>
@@ -42,63 +42,39 @@
                         </a>
                     </li>
                 </ul>
-            </div>     -->
-            
-            <div class="mobile">
-                <nav class="mobile-main-nav">       
-                    <a href="./index.html" class="mobile-logo"> <span class="mobile-logo-word">Web</span> Studio
-                    </a>
-
-                    <ul class="mobile-site-nav list">
-                        <li class="item nav"><a href="" class="mobile-nav-link current">Студия</a></li>
-                        <li class="item nav"><a href="./portfolio.html" class="mobile-nav-link">Портфолио</a></li>
-                        <li class="item nav"><a href="" class="mobile-nav-link">Контакты</a></li>
-                    </ul>
-                </nav>
-
-                <ul class="mobile-contact-nav list">
-                    <li class="item mobile-contact-item">
-                        <a href="mailto:info@devstudio.com" class="mobile-contact-link">
-                          <svg class="contacts-icon" width="16" height="12">
-                            <use href="./images/sprite.svg#envelope"></use>
-                          </svg>
-                          info@devstudio.com
-                        </a>
-                    </li>
-                    <li class="item mobile-contact-item">
-                        <a href="tel:+380961111111" class="mobile-contact-link">
-                          <svg class="contacts-icon" width="10" height="16">
-                            <use href="./images/sprite.svg#mf"></use>
-                          </svg>
-                          +38 096 111 11 11
-                        </a>
-                    </li>
-                </ul>
             </div>     
-        </header>
+        </header> -->
 
         <main>
+
             <!-- Герой -->
-            <section class="hero">
-                <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
-                <button type="button" class="button" data-modal-open>Заказать услугу</button>
+            <section class="hero section-hero">
+                <div class="hero-block">
+                    <h1 class="hero-title">Эффективные решения <br> для вашего бизнеса</h1>
+                    <button type="button" class="button" data-modal-open>Заказать услугу</button>
+                </div>                
             </section>
 
             <!-- Наши преимущества -->
-            <section class="section-advantages">
+            <section class="section">
                 <div class="container flexbox">
                     <h2 class="title visually-hidden" >Наши преимущества</h2>
                     <ul class="advantages-list list">
-                        <li class="advantages item item-antenna">
-                            <!-- <img src="./images/antenna.svg" alt="Значок антенны" /> -->
+                        <li class="advantages item">
+                            <div class="icon">
+                                <img src="./images/antenna.svg" alt="Значок антенны" />
+                            </div>
                             <h3 class="advantages-title">Внимание к деталям</h3>
                             <p class="advantages-description">
                             Идейные соображения, а также начало повседневной работы
                             по формированию позиции.
                             </p>
+                        </li>
 
-                        <li class="advantages item item-clock">
-                            <!-- <img src="./images/clock.svg" alt="Значок часов" /> -->
+                        <li class="advantages item">
+                            <div class="icon">
+                                <img src="./images/clock.svg" alt="Значок часов" />
+                            </div>
                             <h3 class="advantages-title">Пунктуальность</h3>
                             <p class="advantages-description">
                             Задача организации, в особенности же рамки и место обучения
@@ -106,8 +82,10 @@
                             </p>
                         </li>
 
-                        <li class="advantages item item-diagram">
-                            <!-- <img src="./images/diagram.svg" alt="Значок диграмы" /> -->
+                        <li class="advantages item">
+                            <div class="icon">
+                                <img src="./images/diagram.svg" alt="Значок диграмы" />
+                            </div>                            
                             <h3 class="advantages-title">Планирование</h3>
                             <p class="advantages-description">
                             Равным образом консультация с широким активом в значительной
@@ -115,8 +93,10 @@
                             </p>
                         </li>
 
-                        <li class="advantages item item-astronaut">
-                            <!-- <img src="./images/astronaut.svg" alt="Значок космонавта" /> -->
+                        <li class="advantages item">
+                            <div class="icon">
+                                <img src="./images/astronaut.svg" alt="Значок космонавта" />
+                            </div>
                             <h3 class="advantages-title">Современные технологии</h3>
                             <p class="advantages-description">
                             Значимость этих проблем настолько очевидна, что реализация 
@@ -128,26 +108,38 @@
             </section>
 
             <!-- Чем мы занимаемся -->
-            <section class="work-section">
+            <section class="section mobile-hidden">
                 <div class="container">
                     <h2 class="section-title">Чем мы занимаемся</h2>
-                    <ul class="flexbox list work-list">
+                    <ul class="list work-list">
                         <li class="work item">
-                            <img class="work-img" src="./images/pc.jpg " alt="Настольный компьютер" width="370">
+                            <picture>
+                                <img srcset="./images/desktop/dtPc.jpg 1x, 
+                                    ./images/desktop/dtPc@2x.jpg 2x" src="./images/desktop/dtPc.jpg"
+								alt="настольный компьютер">
+                            </picture>
                             <p class="work-text">
                                 Десктопные приложения
                             </p>
                         </li>
 
                         <li class="work item">
-                            <img class="work-img" src="./images/laptop.jpg  " alt="Ноутбук" width="370">
+                            <picture>
+                                <img srcset="./images/desktop/dtLaptop.jpg 1x, 
+                                    ./images/desktop/dtLaptop@2x.jpg 2x" src="./images/desktop/dtLaptop.jpg"
+								alt="ноутбук">
+                            </picture>
                             <p class="work-text">
                                 Мобильные приложения
                             </p>
                         </li>
 
                         <li class="work item">
-                            <img class="work-img" src="./images/tablet.jpg  " alt="Планшет" width="370">
+                            <picture>
+                                <img srcset="./images/desktop/dtTablet.jpg 1x, 
+                                    ./images/desktop/dtTablet@2x.jpg 2x" src="./images/desktop/dtTablet.jpg"
+								alt="планшет">
+                            </picture>
                             <p class="work-text">
                                 Дизайнерские решения
                             </p>
@@ -157,12 +149,20 @@
             </section>
 
             <!-- Наша команда -->
-            <section class="team-section">
+            <section class="team-section section">
                 <div class="container">
                     <h2 class="section-title">Наша команда</h2>
-                    <ul class="flexbox list">
+                    <ul class="team-list list">
                         <li class="team-item">
-                            <img src="./images/igor.jpg" alt="Фото" width="270" />
+                            <picture class="team-foto">
+                                <source srcset="./images/desktop/dtIgor.jpg 1x, ./images/desktop/dtIgor@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/tablet/tablIgor.jpg 1x, ./images/tablet/tablIgor@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/mobile/mobileIgor.jpg 1x, ./images/mobile/mobileIgor@2x.jpg 2x">
+                                <img src="./images/desktop/dtIgor.jpg" alt="продакт дизайнер Игорь Демьяненко"/>
+                            </picture>
+                            
                             <div class="team-description">
                                 <h3 class="team list-title">Игорь Демьяненко</h3>
                                 <p class="team-text">Product Designer</p>
@@ -200,7 +200,14 @@
                         </li>
 
                         <li class="team-item">
-                            <img src="./images/olga.jpg" alt="Фото" width="270" />
+                            <picture class="team-foto">
+                                <source srcset="./images/desktop/dtOlga.jpg 1x, ./images/desktop/dtOlga@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/tablet/tablOlga.jpg 1x, ./images/tablet/tablOlga@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/mobile/mobileOlga.jpg 1x, ./images/mobile/mobileOlga@2x.jpg 2x">
+                                <img src="./images/desktop/dtOlga.jpg" alt="фронтенд девелопер Ольга Репина"/>
+                            </picture>                            
                             <div class="team-description">
                                 <h3 class="team list-title">Ольга Репина</h3>
                                 <p class="team-text">Frontend Developer</p>
@@ -234,12 +241,18 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
-                           
+                            </div>                           
                         </li>
 
-                        <li class="team-item">     
-                            <img src="./images/nikolay.jpg" alt="Фото" width="270"/>
+                        <li class="team-item">
+                            <picture class="team-foto">
+                                <source srcset="./images/desktop/dtNikolay.jpg 1x, ./images/desktop/dtNikolay@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/tablet/tablNikolay.jpg 1x, ./images/tablet/tablNikolay@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/mobile/mobileNikolay.jpg 1x, ./images/mobile/mobileNikolay@2x.jpg 2x">
+                                <img src="./images/desktop/dtNikolay.jpg" alt="маркетолог Николай Тарасов"/>
+                            </picture>                                
                             <div class="team-description">
                                 <h3 class="team list-title">Николай Тарасов</h3>
                                 <p class="team-text">Marketing</p>
@@ -273,12 +286,18 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
-                            
+                            </div>                            
                         </li>
 
-                        <li class="team-item">    
-                            <img src="./images/mihail.jpg" alt="Фото" width="270"/>
+                        <li class="team-item">
+                            <picture class="team-foto">
+                                <source srcset="./images/desktop/dtMihail.jpg 1x, ./images/desktop/dtMihail@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source srcset="./images/tablet/tablMihail.jpg 1x, ./images/tablet/tablMihail@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source srcset="./images/mobile/mobileMihail.jpg 1x, ./images/mobile/mobileMihail@2x.jpg 2x">
+                                <img src="./images/desktop/dtMihail.jpg" alt="дизайнер Михаил Ермаков"/>
+                            </picture>                             
                             <div class="team-description">
                                 <h3 class="team list-title">Михаил Ермаков</h3>
                                 <p class="team-text">UI Designer</p>
@@ -323,66 +342,47 @@
             <section class="clients-section">
                 <div class="container">
                     <h2 class="section-title"> Постоянные клиенты</h2>
-                    <ul class="flexbox list">
-
+                    <ul class="clients-list list">
                         <li class="clients-item">
                             <a href="#" class="clients-link" aria-label="Логотип компании">
-                                <div class="box-icon">
-                                    <svg class="client-icon" width="44" height="50">
-                                        <use href="./images/sprite.svg#Company1"></use>
-                                    </svg>
-                                 </div>
+                                <svg class="client-icon" width="44" height="50">
+                                    <use href="./images/sprite.svg#Company1"></use>
+                                </svg>
                             </a>  
                         </li>
-
                         <li class="clients-item">
-                            <a href="#" class="clients-link" aria-label="Логотип компании">
-                                <div class="box-icon">
-                                    <svg class="client-icon" width="40" height="52">
-                                        <use href="./images/sprite.svg#Company2"></use>
-                                    </svg>
-                                </div>
-                               
+                            <a href="#" class="clients-link" aria-label="Логотип компании">                                
+                                <svg class="client-icon" width="40" height="52">
+                                    <use href="./images/sprite.svg#Company2"></use>
+                                </svg>                                                        
                             </a>
                         </li>
-
                         <li class="clients-item">
-                            <a href="#" class="clients-link" aria-label="Логотип компании">
-                                <div class="box-icon">
-                                    <svg class="client-icon" width="41" height="43">
-                                        <use href="./images/sprite.svg#Company3"></use>
-                                    </svg>
-                                 </div>
+                            <a href="#" class="clients-link" aria-label="Логотип компании">                                
+                                <svg class="client-icon" width="41" height="43">
+                                    <use href="./images/sprite.svg#Company3"></use>
+                                </svg>                                
                             </a>
                         </li>
-
                         <li class="clients-item">
-                            <a href="#" class="clients-link" aria-label="Логотип компании">
-                                <div class="box-icon">
-                                    <svg class="client-icon" width="80" height="43">
-                                        <use href="./images/sprite.svg#Company4"></use>
-                                    </svg>
-                                 </div>
+                            <a href="#" class="clients-link" aria-label="Логотип компании">                                
+                                <svg class="client-icon" width="80" height="43">
+                                    <use href="./images/sprite.svg#Company4"></use>
+                                </svg>                                
                             </a>
                         </li>
-
                         <li class="clients-item">
-                            <a href="#" class="clients-link" aria-label="Логотип компании">
-                                <div class="box-icon">
-                                    <svg class="client-icon" width="59" height="47">
-                                        <use href="./images/sprite.svg#Company5"></use>
-                                    </svg>
-                                 </div>
+                            <a href="#" class="clients-link" aria-label="Логотип компании">                                
+                                <svg class="client-icon" width="59" height="47">
+                                    <use href="./images/sprite.svg#Company5"></use>
+                                </svg>                                
                             </a>
                         </li>
-
                         <li class="clients-item">
-                            <a href="#" class="clients-link" aria-label="Логотип компании">
-                                <div class="box-icon">
-                                    <svg class="client-icon" width="89" height="46">
-                                        <use href="./images/sprite.svg#Company6"></use>
-                                    </svg>
-                                 </div>
+                            <a href="#" class="clients-link" aria-label="Логотип компании">                                
+                                <svg class="client-icon" width="89" height="46">
+                                    <use href="./images/sprite.svg#Company6"></use>
+                                </svg>                                
                             </a>
                         </li>
                     </ul>
@@ -392,7 +392,7 @@
 
              <!-- Футер -->
         <footer class="footer">
-            <div class="container flexbox">
+            <div class="container footer-flexbox">
                 <div class="footer-address">
                     <a href="./index.html" class="footer-logo"> <span class="logo-word">Web</span> Studio
                     </a>
@@ -431,19 +431,22 @@
                         </li>
                     </ul>
                 </div>
-                <div class="footer-join">
-                    <div class="footer-form-field">
-                        <label for="mail" class="footer-title">Подпишитесь на рассылку</label>
-                        <input type="email" name="mail" id="mail" placeholder="E-mail" />
-                    </div>
-                    <button type="button" class="button button-footer">Подписаться</button>
+                    <div class="footer-form">
+                    <p class="footer-text">Подпишитесь на рассылку</p>
+                    <form action="" method="POST">
+                        <input type="e-mail" placeholder="E-mail" name="mail" required class="footer-field" />
+                        <button type="submit" class="button button-footer">Подписаться<svg class="footer-icon">
+                                <use href="./images/sprite.svg#plane"></use>
+                            </svg>
+                        </button>
+                    </form>
                 </div>
                 
             </div>
         </footer>
 
         <!-- Модалка и форма -->
-        <div class="backdrop is-hidden" data-modal>
+        <!-- <div class="backdrop is-hidden" data-modal>
             <div class="modal">
                 <button class="button-modal" data-modal-close>
                     <svg class="cross-icon"  width="18" height="18">
@@ -501,7 +504,7 @@
 
             </div>
         </div>
-        <script src="./js/modal.js"></script>
+        <script src="./js/modal.js"></script> -->
   </body>
 
 </html> 

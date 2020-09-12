@@ -96,8 +96,8 @@
     <path d="M14.5 0h-13C.673 0 0 .628 0 1.4v8.402c0 .772.673 1.4 1.5 1.4h13c.827 0 1.5-.628 1.5-1.4V1.4c0-.772-.673-1.4-1.5-1.4zm0 .933a.53.53 0 0 1 .192.037L8 6.384 1.308.97A.529.529 0 0 1 1.5.933h13zm0 9.335h-13c-.276 0-.5-.209-.5-.466V1.956l6.672 5.398A.52.52 0 0 0 8 7.468a.52.52 0 0 0 .328-.114L15 1.956v7.846c0 .257-.224.466-.5.466z"
       ></path>
   </symbol>
-  <symbol viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="plane">
-    <path d="M24 0L0 13.5l7.67 2.84L19.5 5.25l-8.998 12.14.007.002-.009-.002V24l4.301-5.018L20.251 21 24 0z" fill="#fff"></path>
+  <symbol viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="plane">
+    <path d="M24 0L0 13.5l7.67 2.84L19.5 5.25l-8.998 12.14.007.002-.009-.002V24l4.301-5.018L20.251 21 24 0z"></path>
   </symbol>
   <symbol viewBox="0 0 1600 600" fill="none" xmlns="http://www.w3.org/2000/svg" id="overlay">
     <path fill="#2F303A" fill-opacity=".8" d="M0 0h1600v600H0z"></path>
@@ -156,7 +156,9 @@
    <path d="M3.96 7.75l-.07-.06-.07.06-.89.84-.08.07.08.08 3.5 3.33.07.07.06-.07 7.5-7.16.08-.07-.07-.07-.88-.84-.07-.07-.07.07-6.55 6.24-2.54-2.42z" fill="#fff" stroke="#fff" stroke-width=".2"></path>
 </symbol>
 
-
+<symbol id="burger" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0 2.67V0h24v2.67H0zm0 6.66h24V6.67H0v2.66zM0 16h24v-2.67H0V16z"/>
+</symbol>
 
 </svg>
 
