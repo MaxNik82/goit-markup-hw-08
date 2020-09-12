@@ -1,11 +1,18 @@
 .hero-title {
-    margin: 0 0 30px;
-  
-    color: $primary-white-color;
-    letter-spacing: 0.06em;
-    font-style: 400;
+    margin-top: 0;
+    margin-bottom: 30px;
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.62;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
+
+    @media screen and (min-width: $desktop) {
+
+        font-size: 44px;
+        line-height: 1.36;
+
     }
+}
+
+
