@@ -1,0 +1,202 @@
+.mobile-nav-container {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    background-color: $white-color;
+    border-bottom: 1px solid #ececec;
+    z-index: 149;
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 450px;
+
+
+}
+
+@media screen and (max-width: 767px) {
+    .menu-btn {
+        display: inline-flex;
+        padding: 0;
+        color: $primary-text-color;
+        background-color: $white-color;
+        background-origin: border-box;
+        border: none;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+
+        & .open-icon {
+            display: block;
+            padding-right: 15px;
+        }
+
+        & .close-icon {
+            display: none;
+        }
+    }
+
+    .menu-icon {
+        fill: currentColor;
+    }
+
+    .menu-btn.is-open .open-icon {
+        display: none;
+    }
+
+    .menu-btn.is-open .close-icon {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .menu-container {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        background-color: $white-color;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08),
+            0px 1px 3px rgba(0, 0, 0, 0.16);
+
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-100%);
+        transition: transform 200ms linear, opacity 300ms linear;
+
+        &.is-open {
+            transform: translateY(0);
+            opacity: 1;
+            pointer-events: initial;
+            z-index: 999;
+        }
+    }
+}
+
+@media screen and (min-width: $tablet) {
+    .menu-container {
+        display: none;
+    }
+}
+
+.site-nav-mobile {
+    padding-top: 60px;
+
+    &-item {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    &-item:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+.contacts-mobile {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &-item {
+        text-align: center;
+        margin-bottom: 16px;
+    }
+
+    &-item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+
+
+.site-nav-link-mobile {
+    color: $primary-text-color;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &::after {
+        content: "";
+        background-color: $white-color;
+        transition-property: background-color;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:hover::after,
+    &:focus::after,
+    &.current::after {
+        content: "";
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $accent-color;
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        transform: translate(0px, 1px);
+    }
+
+    &.current {
+        color: $accent-color;
+    }
+}
+
+
+
+.contacts-link-mobile {
+    color: $list-text-color;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    fill: $list-text-color;
+    transition-property: color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.site-nav-link-mobile:hover,
+.contacts-link-mobile:hover,
+.site-nav-link-mobile:focus,
+.contacts-link-mobile:focus {
+    color: $accent-color;
+    fill: $accent-color;
+}
+
+.logo-mobile {
+    font-family: Raleway, serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.17;
+    text-decoration: none;
+    color: $primary-text-color;
+    display: block;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.logo-first-mobile {
+    color: $accent-color;
+}

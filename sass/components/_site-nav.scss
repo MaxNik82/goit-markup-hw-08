@@ -1,18 +1,23 @@
 .site-nav {
     display: flex;
-    margin-left: 85px;
+    margin-left: 90px;
+
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+        margin-left: 88px;
 
     .nav-link:hover,
     .nav-link:focus {
         color: $accent-color;
+        }
     }
 }
 
 .item.nav {
     position: relative;
+    margin-right: 50px;
 
-    &.item + .item {
-        margin-left: 50px;
+    &:last-child {
+        margin-right: 0;
     }
 }
   
