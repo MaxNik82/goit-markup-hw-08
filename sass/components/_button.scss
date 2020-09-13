@@ -22,7 +22,6 @@
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
 .button-footer {
     display: block;
     padding-left: 27px;
@@ -37,7 +36,6 @@
         margin-left: 8px;
         margin-right: 0px;
     }
-    
 }
 
 .button-modal {
@@ -86,6 +84,3 @@
 }
 
 
-.button-item:not(:last-child) {
-    margin-right: 10px;
-}

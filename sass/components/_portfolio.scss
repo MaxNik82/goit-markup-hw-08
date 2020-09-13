@@ -6,28 +6,123 @@
     border: 1px solid #ECECEC;
 }
 
-.filtr {
-    justify-content: center;
-    padding: 0 0 34px;
+.buttons {
+    
+    @media screen and (max-width:767px) {
+        margin-top: 120px
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin-top: $margin-mobile;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-top: $margin-desktop;
+    }
 }
 
+.buttons-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    text-align: center;
+
+    @media screen and (min-width: $tablet) {
+
+        justify-content: center;
+
+    }
+
+    @media screen and (max-width: 319px) {
+
+        display: block;
+
+    }
+}
+
+.button-item:not(:last-child) {
+    margin-right: 8px;
+
+    @media screen and (min-width: 400px) and (max-width: 767px) {
+
+        &:nth-child(3n) {
+            margin-right: 0px;
+        }
+
+        &:not(:nth-last-child(-n+2)) {
+            margin-bottom: 15px;
+        }
+
+    }
+
+    @media screen and (max-width: 399px) {
+
+        &:nth-child(2n) {
+            margin-right: 0px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+    }
+
+    @media screen and (max-width: 319px) {
+
+        &:not(:last-child) {
+            margin-bottom: 15px;
+        }
+
+    }
+
+}
+.filtr {
+    margin-top: 32px;
+}
 .filtr-list {
     display: flex;
     flex-wrap: wrap;
 }
 
 .filtr-item {
-    width: calc((100% - 60px) / 3);
-    margin-right: 30px;
-    margin-bottom: 30px;
-    border: 1px solid #EEEEEE;
+    @media screen and (max-width: 767px) {
 
-    &:nth-child(3n) {
-        margin-right: 0;
+        max-width: 450px;
+        width: 100%;
+        margin-bottom: 30px;
+        margin-right: auto;
+        margin-left: auto;
+
+        &:last-child {
+            margin-bottom: 0px;
+        }
     }
 
-    &:nth-last-child(-n+3) {
-        margin-bottom: 0;
+    @media screen and (min-width: $tablet) and (max-width: 1199px) {
+
+        width: calc((100% - 30px) / 2);
+
+        &:not(:nth-child(2n)) {
+            margin-right: 30px;
+        }
+
+        &:not(:nth-last-child(-n+2)) {
+            margin-bottom: 30px;
+        }
+
+    }
+
+    @media screen and (min-width: $desktop) {
+
+        width: calc((100% - 60px) / 3);
+
+        &:not(:nth-child(3n)) {
+            margin-right: 30px;
+        }
+
+        &:not(:nth-last-child(-n+3)) {
+            margin-bottom: 30px;
+        }
+
     }
 
     &:hover,
@@ -38,6 +133,10 @@
 }
 
 .filtr-link {
+    display: block;
+    margin: 0;
+    padding: 0;
+    color: inherit;
     text-decoration: none;
 
     &:hover,
@@ -80,14 +179,16 @@
         opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.firltr-portfolio {
+.filtr-portfolio {
     display: block;
-    padding: 0 24px 20px;
+    padding: 20px 24px;
+    border-left: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
 }
 
 .filtr-title { 
-    margin: 20px 0 0;
-
+    margin: 0;
     color: $primary-text-color;
     font-size: 18px;
     line-height: 2;
@@ -96,7 +197,6 @@
  
 .text {
     margin: 5px 0 0;
-
     color: $list-text-color;
     font-size: 16px;
     line-height: 1.9;

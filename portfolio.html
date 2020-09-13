@@ -9,61 +9,111 @@
   </head>
   <body>
       <!-- Шапка страницы -->
-        <header class="page-header border">
-            <div class="container flexbox">
-                <nav class="main-nav">       
-                    <a href="./index.html" class="logo"> <span class="logo-word">Web</span> Studio
-                    </a>
-
-                    <ul class="site-nav list">
-                        <li class="item nav"><a href="./index.html" class="nav-link">Студия</a></li>
-                        <li class="item nav"><a href="" class="nav-link current">Портфолио</a></li>
-                        <li class="item nav"><a href="" class="nav-link">Контакты</a></li>
+        <header class="page-header">            
+            <nav class="container main-nav">       
+                <a href="./index.html" class="logo"> <span class="logo-word">Web</span> Studio</a>
+                        <ul class="site-nav list">
+                            <li class="item nav"><a href="./index.html" class="nav-link">Студия</a></li>
+                            <li class="item nav"><a href="" class="nav-link current">Портфолио</a></li>
+                            <li class="item nav"><a href="" class="nav-link">Контакты</a></li>
+                        </ul>               
+                    <ul class="contact-nav list">
+                        <li class="item contact-item">
+                            <a href="mailto:info@devstudio.com" class="contact-link">
+                            <svg class="contacts-icon" width="16" height="12">
+                                <use href="./images/sprite.svg#envelope"></use>
+                            </svg>
+                            info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="item contact-item">
+                            <a href="tel:+380961111111" class="contact-link">
+                            <svg class="contacts-icon" width="10" height="16">
+                                <use href="./images/sprite.svg#mf"></use>
+                            </svg>
+                            +38 096 111 11 11
+                            </a>
+                        </li>
                     </ul>
                 </nav>
-
-                <ul class="contact-nav list">
-                    <li class="item contact-item">
-                        <a href="mailto:info@devstudio.com" class="contact-link">
-                          <svg class="contacts-icon" width="16" height="12">
-                            <use href="./images/sprite.svg#envelope"></use>
-                          </svg>
-                          info@devstudio.com
+                
+                <div class="mobile-header">
+                    <nav class="container mobile-nav">
+                        <a href="./index.html" class="mobile-logo">
+                            <span class="mobile-word">Web</span>Studio
                         </a>
-                    </li>
-                    <li class="item contact-item">
-                        <a href="tel:+380961111111" class="contact-link">
-                          <svg class="contacts-icon" width="10" height="16">
-                            <use href="./images/sprite.svg#mf"></use>
-                          </svg>
-                          +38 096 111 11 11
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </header>
+                        <div class="mobile-menu" data-menu>
+                            <ul class="list mobile-list">
+                                <li class="mobile-list-item"><a href="./index.html"
+                                        class="mobile-link">Студия</a>
+                                </li>
+                                <li class="mobile-list-item">
+                                    <a href="./portfolio.html" class="mobile-link current">Портфолио</a>
+                                </li>
+                                <li class="mobile-list-item">
+                                    <a href="#" class="mobile-link">Контакты</a>
+                                </li>
+                            </ul>
+                            <ul class="list mobile-contacts">
+                                <li class="mobile-contacts-item">
+                                    <a href="mailto:info@devstudio.com" class="contacts-link-mobile">
+                                        <svg class="icon-contacts" width="16" height="12">
+                                            <use href="./images/sprite.svg#envelope"></use>
+                                        </svg>
+                                        info@devstudio.com
+                                    </a>
+                                </li>
+                                <li class="mobile-contacts-item">
+                                    <a href="tel:+380961111111" class="contacts-link-mobile phone">
+                                        <svg class="icon-contacts" width="10" height="15">
+                                            <use href="./images/sprite.svg#mf"></use>
+                                        </svg>
+                                        +38 096 111 11 11
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <button type="button" class="menu-btn" aria-expanded="false" data-menu-button>
+                            <svg class="menu-icon" width="40" height="40" aria-label="переключатель мобильного меню">
+                                <use href="./images/sprite.svg#burger" class="open-icon"></use>
+                                <use href="./images/sprite.svg#cross" class="close-icon"></use>
+                            </svg>
+                        </button>
+                    </nav>
+                </div>
+            </header>
 
         <main>
             <!-- Наши услуги-->
-            <section class="section">
-                <div class="container">
-                    <h1 class="title visually-hidden"> Список услуг</h1>
-                    <ul class="flexbox list filtr">
+            <h1 class="title visually-hidden">Портфолио</h1>
+            <section class="container buttons">                
+                    <h2 class="title visually-hidden"> Список услуг</h2>
+                    <ul class="list buttons-block">
+                        <li class="button-item"><button type="button" class="button-filtr">Все</button></li>
                         <li class="button-item"><button type="button" class="button-filtr">Веб-сайты</button></li>
                         <li class="button-item"><button type="button" class="button-filtr">Приложения</button></li>
                         <li class="button-item"><button type="button" class="button-filtr">Дизайн</button></li>
-                        <li class="button-item"><button type="button" class="button-filtr">Все</button></li>
                         <li class="button-item"><button type="button" class="button-filtr">Маркетинг</button></li>
-                    </ul> 
-                </div>            
-           
-                <div class="container flex">
-                    <h2 class="title visually-hidden"> Список проектов</h2>
+                    </ul>                
+            </section>   
+
+            <section class="container filtr">       
+                <h2 class="title visually-hidden"> Список проектов</h2>
                     <ul class="filtr-list list">
                         <li class="filtr-item"> 
                             <a href="#" class="filtr-link">
+
                                 <div class="img-box">
-                                    <img src="./images/tehnokryak.jpg" alt="Разработка сайтов" width="370">
+                                    <picture>
+                                        <source
+                                            srcset="./images/desktop/dtTehnokryak.jpg 1x, ./images/desktop/dtTehnokryak@2x.jpg 2x"
+                                            media="(min-width: 1200px)">
+                                        <source srcset="./images/tablet/tablTehnokryak.jpg 1x, ./images/tablet/tablTehnokryak@2x.jpg 2x"
+                                            media="(min-width: 768px)">
+                                        <source srcset="./images/mobile/mobileTehnokryak.jpg 1x, ./images/mobile/mobileTehnokryak@2x.jpg 2x">
+                                        <img src="./images/desktop/dtTehnokryak.jpg" alt="Разработка сайтов">
+                                    </picture>
+                                    
                                     <div class="box-hover">
                                         <p class="filtr-text">
                                             Технокряк это современная площадка распространения коронавируса. 
@@ -81,7 +131,15 @@
                         <li class="filtr-item">
                             <a href="#" class="filtr-link">
                                 <div class="img-box">
-                                    <img src="./images/basketbol.jpg" alt="Дизайн сайтов" width="370">
+                                    <picture>
+                                        <source
+                                            srcset="./images/desktop/dtBasketbol.jpg 1x, ./images/desktop/dtBasketbol@2x.jpg 2x"
+                                            media="(min-width: 1200px)">
+                                        <source srcset="./images/tablet/tablBasketbol.jpg 1x, ./images/tablet/tablBasketbol@2x.jpg 2x"
+                                            media="(min-width: 768px)">
+                                        <source srcset="./images/mobile/mobileBasketbol.jpg 1x, ./images/mobile/mobileBasketbol@2x.jpg 2x">
+                                        <img src="./images/desktop/dtBasketbol.jpg" alt="Дизайн сайтов">
+                                    </picture>                                    
                                     <div class="box-hover">
                                         <p class="filtr-text">
                                             Технокряк это современная площадка распространения коронавируса. 
@@ -99,7 +157,15 @@
                         <li class="filtr-item">
                             <a href="#" class="filtr-link">
                                 <div class="img-box">
-                                    <img src="./images/restaurant.jpg" alt="Разработка приложений" width="370">
+                                    <picture>
+                                        <source
+                                            srcset="./images/desktop/dtRestaurant.jpg 1x, ./images/desktop/dtRestaurant@2x.jpg 2x"
+                                            media="(min-width: 1200px)">
+                                        <source srcset="./images/tablet/tablRestaurant.jpg 1x, ./images/tablet/tablRestaurant@2x.jpg 2x"
+                                            media="(min-width: 768px)">
+                                        <source srcset="./images/mobile/mobileRestaurant.jpg 1x, ./images/mobile/mobileRestaurant@2x.jpg 2x">
+                                        <img src="./images/desktop/dtRestaurant.jpg" alt="Разработка приложений">
+                                    </picture>                                    
                                     <div class="box-hover">
                                         <p class="filtr-text">
                                             Технокряк это современная площадка распространения коронавируса. 
@@ -117,7 +183,15 @@
                         <li class="filtr-item">
                             <a href="#" class="filtr-link">
                                 <div class="img-box">
-                                    <img src="./images/headphones.jpg" alt="Маркетинг" width="370">
+                                    <picture>
+                                        <source
+                                            srcset="./images/desktop/dtHeadphones.jpg 1x, ./images/desktop/dtHeadphones@2x.jpg 2x"
+                                            media="(min-width: 1200px)">
+                                        <source srcset="./images/tablet/tablHeadphones.jpg 1x, ./images/tablet/tablHeadphones@2x.jpg 2x"
+                                            media="(min-width: 768px)">
+                                        <source srcset="./images/mobile/mobileHeadphones.jpg 1x, ./images/mobile/mobileHeadphones@2x.jpg 2x">
+                                            <img src="./images/desktop/dtHeadphones.jpg" alt="Маркетинг">
+                                    </picture>                                    
                                     <div class="box-hover">
                                         <p class="filtr-text">
                                             Технокряк это современная площадка распространения коронавируса. 
@@ -135,7 +209,15 @@
                         <li class="filtr-item">
                             <a href="#" class="filtr-link">
                                 <div class="img-box">
-                                    <img src="./images/boxes.jpg" alt="Разработка приложений" width="370">
+                                    <picture>
+                                        <source
+                                            srcset="./images/desktop/dtBoxes.jpg 1x, ./images/desktop/dtBoxes@2x.jpg 2x"
+                                            media="(min-width: 1200px)">
+                                        <source srcset="./images/tablet/tablBoxes.jpg 1x, ./images/tablet/tablBoxes@2x.jpg 2x"
+                                            media="(min-width: 768px)">
+                                        <source srcset="./images/mobile/mobileBoxes.jpg 1x, ./images/mobile/mobileBoxes@2x.jpg 2x">
+                                            <img src="./images/desktop/dtBoxes.jpg" alt="Разработка приложений">
+                                    </picture>                                    
                                     <div class="box-hover">
                                         <p class="filtr-text">
                                             Технокряк это современная площадка распространения коронавируса. 
@@ -153,7 +235,15 @@
                         <li class="filtr-item">
                             <a href="#" class="filtr-link">
                                 <div class="img-box">
-                                    <img src="./images/pc.jpg" alt="Разработка сайтов" width="370">
+                                    <picture>
+                                        <source
+                                            srcset="./images/desktop/dtMac.jpg 1x, ./images/desktop/dtMac@2x.jpg 2x"
+                                            media="(min-width: 1200px)">
+                                        <source srcset="./images/tablet/tablMac.jpg 1x, ./images/tablet/tablMac@2x.jpg 2x"
+                                            media="(min-width: 768px)">
+                                        <source srcset="./images/mobile/mobileMac.jpg 1x, ./images/mobile/mobileMac@2x.jpg 2x">
+                                        <img src="./images/desktop/dtPc.jpg" alt="Разработка сайтов">
+                                    </picture>                                     
                                     <div class="box-hover">
                                         <p class="filtr-text">
                                             Технокряк это современная площадка распространения коронавируса. 
@@ -171,7 +261,15 @@
                         <li class="filtr-item">
                             <a href="#" class="filtr-link">
                                 <div class="img-box">
-                                    <img src="./images/book.jpg" alt="Дизайн сайтов" width="370">
+                                    <picture>
+                                        <source
+                                            srcset="./images/desktop/dtBook.jpg 1x, ./images/desktop/dtBook@2x.jpg 2x"
+                                            media="(min-width: 1200px)">
+                                        <source srcset="./images/tablet/tablBook.jpg 1x, ./images/tablet/tablBook@2x.jpg 2x"
+                                            media="(min-width: 768px)">
+                                        <source srcset="./images/mobile/mobileBook.jpg 1x, ./images/mobile/mobileBook@2x.jpg 2x">
+                                            <img src="./images/desktop/dtBook.jpg" alt="Дизайн сайтов">
+                                    </picture>                                    
                                     <div class="box-hover">
                                         <p class="filtr-text">
                                             Технокряк это современная площадка распространения коронавируса. 
@@ -189,7 +287,15 @@
                         <li class="filtr-item">
                             <a href="#" class="filtr-link">
                                 <div class="img-box">
-                                    <img src="./images/lab.jpg" alt="Маркетинг" width="370">
+                                    <picture>
+                                        <source
+                                            srcset="./images/desktop/dtLab.jpg 1x, ./images/desktop/dtLab@2x.jpg 2x"
+                                            media="(min-width: 1200px)">
+                                        <source srcset="./images/tablet/tablLab.jpg 1x, ./images/tablet/tablLab@2x.jpg 2x"
+                                            media="(min-width: 768px)">
+                                        <source srcset="./images/mobile/mobileLab.jpg 1x, ./images/mobile/mobileLab@2x.jpg 2x">
+                                            <img src="./images/desktop/dtLab.jpg" alt="Маркетинг">
+                                    </picture>                                    
                                     <div class="box-hover">
                                         <p class="filtr-text">
                                             Технокряк это современная площадка распространения коронавируса. 
@@ -207,7 +313,15 @@
                         <li class="filtr-item">
                             <a href="#" class="filtr-link">
                                 <div class="img-box">
-                                    <img src="./images/laptop.jpg" alt="Разработка приложений" width="370">
+                                    <picture>
+                                        <source
+                                            srcset="./images/desktop/dtNout.jpg 1x, ./images/desktop/dtNout@2x.jpg 2x"
+                                            media="(min-width: 1200px)">
+                                        <source srcset="./images/tablet/tablNout.jpg 1x, ./images/tablet/tablNout@2x.jpg 2x"
+                                            media="(min-width: 768px)">
+                                        <source srcset="./images/mobile/mobileNout.jpg 1x, ./images/mobile/mobileNout@2x.jpg 2x">
+                                            <img src="./images/desktop/dtNout.jpg" alt="Разработка приложений">
+                                    </picture>                                    
                                     <div class="box-hover">
                                         <p class="filtr-text">
                                             Технокряк это современная площадка распространения коронавируса. 
@@ -222,15 +336,13 @@
                                 </div>
                             </a>
                         </li>
-                    </ul>
-                </div>
-                
+                    </ul>               
             </section>
         </main>
 
-      <!-- Футер -->
+            <!-- Футер -->
         <footer class="footer">
-            <div class="container flexbox">
+            <div class="container footer-flexbox">
                 <div class="footer-address">
                     <a href="./index.html" class="footer-logo"> <span class="logo-word">Web</span> Studio
                     </a>
@@ -269,15 +381,19 @@
                         </li>
                     </ul>
                 </div>
-                <div class="footer-join">
-                    <div class="footer-form-field">
-                        <label for="mail" class="footer-title">Подпишитесь на рассылку</label>
-                        <input type="email" name="mail" id="mail" placeholder="E-mail" />
-                    </div>
-                    <button type="button" class="button button-footer">Подписаться</button>
+                    <div class="footer-form">
+                    <p class="footer-text">Подпишитесь на рассылку</p>
+                    <form method="POST">
+                        <input type="email" placeholder="E-mail" name="mail" required class="footer-field" />
+                        <button type="submit" class="button button-footer">Подписаться<svg class="footer-icon">
+                                <use href="./images/sprite.svg#plane"></use>
+                            </svg>
+                        </button>
+                    </form>
                 </div>
                 
             </div>
         </footer>
+        <script src="./js/menu.js"></script>
   </body>   
 </html>

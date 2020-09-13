@@ -1,4 +1,4 @@
-.mobile-nav-container {
+.mobile-header {
     position: fixed;
     width: 100%;
     height: 60px;
@@ -59,7 +59,7 @@
 }
 
 @media screen and (max-width: 767px) {
-    .menu-container {
+    .mobile-menu{
         position: absolute;
         top: 60px;
         left: 0;
@@ -84,12 +84,12 @@
 }
 
 @media screen and (min-width: $tablet) {
-    .menu-container {
+    .mobile-menu {
         display: none;
     }
 }
 
-.site-nav-mobile {
+.mobile-list {
     padding-top: 60px;
 
     &-item {
@@ -102,7 +102,8 @@
     }
 }
 
-.contacts-mobile {
+.mobile-contacts {
+    
     padding-top: 60px;
     padding-bottom: 60px;
 
@@ -118,7 +119,7 @@
 
 
 
-.site-nav-link-mobile {
+.mobile-link {
     color: $primary-text-color;
     position: relative;
     display: inline-block;
@@ -176,15 +177,15 @@
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.site-nav-link-mobile:hover,
+.mobile-link:hover,
+.mobile-link:focus,
 .contacts-link-mobile:hover,
-.site-nav-link-mobile:focus,
 .contacts-link-mobile:focus {
     color: $accent-color;
     fill: $accent-color;
 }
 
-.logo-mobile {
+.mobile-logo {
     font-family: Raleway, serif;
     font-style: normal;
     font-weight: 700;
@@ -197,6 +198,6 @@
     padding-bottom: 16px;
 }
 
-.logo-first-mobile {
+.mobile-word {
     color: $accent-color;
 }
